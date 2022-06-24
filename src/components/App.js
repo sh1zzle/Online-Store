@@ -39,17 +39,14 @@ const App = () => {
 
   return (
     <div className='flex flex-col'>
-      <div className='flex flex-row shadow-md mb-12 p-4 fixed w-full bg-zinc-100'>
-        <div className='w-1/3'>
+      <div className='flex flex-row shadow-md sm:mb-12 mb-6 p-4 fixed w-full bg-zinc-100'>
+        <div className='w-full'>
           <h1 className='font-medium text-zinc-600 text-xl p-2 uppercase hover:text-stone-400 tracking-wide cursor-pointer'>
             CrossFit Equipments and Gears
           </h1>
         </div>
 
-        <div className='flex flex-row justify-end  w-2/3  gap-12 text-base text-zinc-600 font-medium'>
-          <h2 className='hover:text-lg hover:text-stone-400 uppercase cursor-pointer font-semibold mt-2 hidden lg:block'>
-            Products
-          </h2>
+        <div className='flex flex-row justify-end  w-2/3 gap-12 text-base text-zinc-600 font-medium'>
           <div>
             <Cart
               onAddToCart={onAddToCart}
@@ -60,8 +57,12 @@ const App = () => {
           </div>
         </div>
       </div>
-      <div className='w-100 px-12 mt-32'>
-        <Items products={products} onAddToCart={onAddToCart} />
+      <div className='w-100 px-12'>
+        <Items
+          products={products}
+          onAddToCart={onAddToCart}
+          pageTitle='Products'
+        />
       </div>
     </div>
   );
